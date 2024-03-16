@@ -1,0 +1,174 @@
+
+/*Глобальные изменения*/
+@font-face {
+    font-family: "Montserrat";
+    src: url(/fonts/Montserrat/static/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(/fonts/Montserrat/static/Montserrat-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Lora";
+    src: url(/fonts/Lora/static/Lora-Regular.ttf);
+    font-weight: 400;
+}
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Montserrat;
+}
+.container{
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+selection {
+    padding: 90px 0;
+}
+h2{
+    font-family: Lora;
+    font-size: 48px;
+    margin: 0 0 60px;
+}
+.section-bg{
+    background: url(../../image/main-background.webp);
+    color: #fff;
+}
+h1{
+    font-family: Lora;
+    font-size: 80px;
+
+}
+p {
+    font-size: 20px;
+    line-height: 2;
+}
+.btn{
+    padding: 13px 15px;
+    color: #fff;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.7s ease;
+
+}
+.btn:hover{
+    background-color: #c74838;
+}
+
+
+
+/*Главная страница*/
+
+.btn-bg{
+    background-color: #c74838;
+}
+.btn-outline{
+    border-color: #c74838;
+}
+.first-screen {
+    height:  100vh;
+    clip-path: ellipse(100% 60% at 50% 35%);
+    display: flex;
+    align-items: center;
+}
+
+
+/*Стрелка в низ*/
+.array{
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 150px;
+    animation: array-animation infinite 2s ease-in-out;
+}
+.array img{
+    width: 100px;
+    height: 100px;
+    transition: all 0.5s ease-in-out;
+} 
+.array:hover img{
+    transform: translateY(25px);
+}
+.array:hover {
+    animation-play-state: paused;
+}
+@keyframes array-animation{ 
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+
+}
+
+
+
+
+/*Блок галерея*/
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.img-wrapper {
+    width: 250px;
+    height: 290px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+.img-wrapper:hover{
+    transform: scale(1.1);
+}
+.img-wrapper img{
+    object-fit: cover;
+}
+
+/*Блок обратной связи*/
+.d-flex{
+    display: flex;
+}
+.w-60{
+    width: 60%;
+}
+.w-40{
+    width: 40%;
+}
+.pr-4{
+    padding-right: 4rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+textarea,
+input {
+    padding: 15px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    border: none;
+    font-family: inherit;
+}
+input:focus,
+textarea:focus{
+    outline: none;
+}
+.backg{
+    display: block;
+}
+
+/*Подвал*/
+footer{
+    padding: 50px 0;
+    text-align: center;
+}
