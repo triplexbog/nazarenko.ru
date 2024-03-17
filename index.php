@@ -9,7 +9,9 @@
     
 </head>
 <body>
-
+    <?php
+        echo "Hellow world";
+    ?>
     <!--Главная страница-->
     <selection class="first-screen section-bg">
         <div class="container">
