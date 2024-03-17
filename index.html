@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт</title>
     <link rel="stylesheet" href="assetts/css/main.css">
+    <link rel="stylesheet" href="assetts/css/lightgallery.min.css">
+    
 </head>
 <body>
     <!--Главная страница-->
@@ -14,8 +16,8 @@
                 <h1>Веб-разработчик <br> к вашим услугам</h1>   
             </div>
             <div>
-                <a class="btn btn-bg" href="@">Узнать больше</a>
-                <a class="btn btn-outline" href="@">Нанять меня</a>
+                <a onclick="smoothScroll('#About')" class="btn btn-bg" href="@">Узнать больше</a>
+                <a onclick="smoothScroll('#rabota')" class="btn btn-outline" href="@">Нанять меня</a>
                 
             </div>
         </div>
@@ -29,7 +31,7 @@
     <!--Блок "Обо мне" -->
     <selection>
         <div class="container">
-                <h2>Обо мне</h2>
+                <h2 id="About">Обо мне</h2>
                 <p>
                     С другой стороны повышения уровня гражданского сознания обеспечивает широкому
                     в формировании существующих финансовых и административных условий
@@ -47,37 +49,36 @@
     <!--Блок галерея-->
     <selection>
         <div class="container">
-                <h2>Галерея</h2>
-                <div class="gallery">
-                    <div class="img-wrapper">
-                        <img src="image/cat.jpg" alt="кошка">                       
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="image/cat3.jpeg" alt="кошка">                       
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="image/cat2.jpeg" alt="кошка">
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="image/dog-corgi.jpg" alt="собака">                        
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="image/dog-haski.jpg" alt="собака">
-                        
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="image/dog1.jpeg" alt="собака">                       
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="image/fish1.jpg" alt="рыбка">
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="image/fish2.jpeg" alt="рыбка">
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="image/fish3.jpg" alt="рыбка">
-                    </div>
-                </div>
+                <h2 class="portfolio">Галерея</h2>
+                <div class="gallery" id="lightgallery">
+                    <a class="img-wrapper" href="image/cat.jpg">
+                        <img src="image/cat.jpg" />
+                    </a>
+                    <a class="img-wrapper" href="image/cat2.jpeg">
+                        <img src="image/cat2.jpeg" />
+                    </a>
+                    <a class="img-wrapper" href="image/cat3.jpeg">
+                        <img src="image/cat3.jpeg" />
+                    </a>
+                    <a class="img-wrapper" href="image/dog-corgi.jpg">
+                        <img src="image/dog-corgi.jpg" />
+                    </a>
+                    <a  class="img-wrapper" href="image/dog-haski.jpg">
+                        <img src="image/dog-haski.jpg" />
+                    </a>
+                    <a class="img-wrapper" href="image/dog1.jpeg">
+                        <img src="image/dog1.jpeg" />
+                    </a>
+                    <a class="img-wrapper" href="image/fish1.jpg">
+                        <img src="image/fish1.jpg" />
+                    </a>
+                    <a class="img-wrapper" href="image/fish2.jpeg">
+                        <img src="image/fish2.jpeg" />
+                    </a>
+                    <a class="img-wrapper" href="image/fish3.jpg">
+                        <img src="image/fish3.jpg" />
+                    </a>
+                  </div>
         </div>
     </selection>
     <!--Блок обратной связи -->
@@ -85,7 +86,7 @@
         <div class="container">
                 <div class="d-flex">
                     <div class="w-60 pr-4">
-                        <h2>Давайте работать вместе</h2>
+                        <h2 id="rabota">Давайте работать вместе</h2>
                         <p>
                             С другой стороны повышения уровня гражданского сознания обеспечивает широкому
                             в формировании существующих финансовых и административных условий
@@ -106,5 +107,15 @@
     <footer>
         <div class="container">Сайт про животных</div>
     </footer>
+    <script src="assetts/JS/lightgallery.min.js"></script>
+    <script type="text/javascript">
+        lightGallery(document.getElementById('lightgallery')); 
+        function smoothScroll(selector){
+            event.preventDefault();
+            document.querySelector(selector).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+       </script>
 </body>
 </html>

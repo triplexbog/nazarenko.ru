@@ -95,7 +95,6 @@ p {
 .array:hover img{
     transform: translateY(25px);
 }
-
 .array:hover {
     animation-play-state: paused;
 }
@@ -109,9 +108,6 @@ p {
     }
 
 }
-
-
-
 
 /*Блок галерея*/
 .gallery{
